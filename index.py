@@ -10,8 +10,8 @@ client = discord.Client()
 async def on_message(message):
     channel = client.get_channel(message.channel.id)
     
-    # we do not want the bot to reply to itself
-    if message.author == client.user:
+    # Le Bot m'obéit. Personne n'est autorisé à l'utiliser 
+    if message.author.id != 344050987843059712:
         return
 
 
@@ -26,12 +26,10 @@ async def on_message(message):
     if message.content.startswith("?get"):
         ID=message.content.split()
         ID=ID[1]
-        print("ok")
         os.chdir("Wallpaper_list")
         if str(ID)+".jpg" in os.listdir():
             os.chdir("..")
             name=show(int(ID)-1)
-            print("trouvé!")
             os.chdir("Wallpaper_list")
             embed= discord.Embed(title="Affichage de **"+ str(name[1]) +"**",description="ID : "+str(name[0]),color=0x00ff00,image=str(ID)+".jpg")
             img= discord.File(str(ID)+".jpg",str(name[1]+".jpg"))
