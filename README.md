@@ -1,6 +1,6 @@
 # Avalon
 
-Un bot Discord privé en Python pour gérer (trouver et envoyer) les images de fond d'écran. Les fond d'écrans sont matérialisés par des fichier .png dans un dossier précis et dans une base de donnée en tableau numpy à 2 dimensions.
+Un bot Discord privé en Python pour gérer (trouver et envoyer) les images de fond d'écran. Les fond d'écrans sont matérialisés par des fichiers .png dans un dossier précis et dans une base de donnée en tableau numpy à 2 dimensions. Les commandes de gestion de la base de donnée se trouve dans manager.py
 
 ## Commandes Disponibles
 ```bash
