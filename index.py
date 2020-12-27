@@ -1,7 +1,6 @@
 import discord
 from manager import *
 import os
-TOKEN = 'NzkwODY1MTQ3NjgwOTE1NDU3.X-G0kA.taxWAbALyOU20SA5Ys4nnWBB95c'
 client = discord.Client()
 
 #config
@@ -74,4 +73,4 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
-client.run(TOKEN)
+client.run(os.environ['TOKEN'])
